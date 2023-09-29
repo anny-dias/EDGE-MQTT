@@ -1,3 +1,5 @@
+#feito no google colab
+
 import paho.mqtt.client as mqtt
 
 # The callback for when the client receives a CONNACK response from the server.
@@ -23,3 +25,17 @@ client.connect("46.17.108.113", 1883, 60)
 # Other loop*() functions are available that give a threaded interface and a
 # manual interface.
 client.loop_forever()
+
+
+
+import paho.mqtt.client as mqtt
+
+client.connect("46.17.108.113", 1883, 60)
+client.publish("/TEF/lamp104/cmd","lamp104@on|") 
+
+
+
+import paho.mqtt.client as mqtt
+
+client.connect("46.17.108.113", 1883, 60)
+client.publish("/TEF/lamp104/cmd","lamp104@off|") 
